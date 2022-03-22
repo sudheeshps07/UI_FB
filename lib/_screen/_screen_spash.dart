@@ -24,7 +24,7 @@ class _ScreenSplashState extends State<ScreenSplash> {
         child: Text(
           'f',
           style: TextStyle(
-              fontSize: 140, fontWeight: FontWeight.bold, color: Colors.white),
+              fontSize: 60, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
     );
