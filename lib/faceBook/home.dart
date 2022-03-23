@@ -27,7 +27,6 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -55,20 +54,27 @@ class Home extends StatelessWidget {
           children: [
             statusSection(),
             thindivider,
-            HeaderButton(buttonOne: headerButton(buttonText:'Live',
-                buttonIcon: Icons.video_call,
-                buttonAction:(){
-              print('go to live');
-                },
-                buttoncolor:Colors.red),
-            buttonTwo: headerButton(buttonText: 'Image', buttonIcon:Icons.photo_library, buttonAction: (){},
-                buttoncolor:Colors.green),
-            buttonThree: headerButton(buttonText: 'room',
-                buttonIcon:Icons.video_call,
-                buttonAction:(){
-              print('creat room');
-                },
-                buttoncolor:Colors.purple),),
+            HeaderButton(
+              buttonOne: headerButton(
+                  buttonText: 'Live',
+                  buttonIcon: Icons.video_call,
+                  buttonAction: () {
+                    print('go to live');
+                  },
+                  buttoncolor: Colors.red),
+              buttonTwo: headerButton(
+                  buttonText: 'Image',
+                  buttonIcon: Icons.photo_library,
+                  buttonAction: () {},
+                  buttoncolor: Colors.green),
+              buttonThree: headerButton(
+                  buttonText: 'room',
+                  buttonIcon: Icons.video_call,
+                  buttonAction: () {
+                    print('creat room');
+                  },
+                  buttoncolor: Colors.purple),
+            ),
             mediumdivider,
             RoomSection(),
             thickdivider,
@@ -80,16 +86,22 @@ class Home extends StatelessWidget {
               pubishTime: '5h',
               postTitle: 'Top Scorer',
               postImage: cr07,
-              showBluetick: true, Commentcount: '342k', SharesCount: '112k', LikeCount: '20m',
+              showBluetick: true,
+              Commentcount: '342k',
+              SharesCount: '112k',
+              LikeCount: '20m',
             ),
             thickdivider,
-        PostCard(
-          name: 'pogba',
-          avatar: pogba,
-          pubishTime: '3h',
-          postTitle: 'Top Assits',
-          postImage: pogba,
-          showBluetick: true, Commentcount: '342k', SharesCount: '112k', LikeCount: '20m'),
+            PostCard(
+                name: 'pogba',
+                avatar: pogba,
+                pubishTime: '3h',
+                postTitle: 'Top Assits',
+                postImage: pogba,
+                showBluetick: true,
+                Commentcount: '342k',
+                SharesCount: '112k',
+                LikeCount: '20m'),
             thickdivider,
             PostCard(
                 name: 'Bruno',
@@ -97,7 +109,10 @@ class Home extends StatelessWidget {
                 pubishTime: '3h',
                 postTitle: '',
                 postImage: bruno,
-                showBluetick: true, Commentcount: '42k', SharesCount: '12k', LikeCount: '10m'),
+                showBluetick: true,
+                Commentcount: '42k',
+                SharesCount: '12k',
+                LikeCount: '10m'),
             thickdivider,
             PostCard(
                 name: 'Yash',
@@ -105,7 +120,10 @@ class Home extends StatelessWidget {
                 pubishTime: '1h',
                 postTitle: '',
                 postImage: yash,
-                showBluetick: true, Commentcount: '41k', SharesCount: '32k', LikeCount: '111m'),
+                showBluetick: true,
+                Commentcount: '41k',
+                SharesCount: '32k',
+                LikeCount: '111m'),
             thickdivider,
             PostCard(
                 name: 'wood',
@@ -113,10 +131,14 @@ class Home extends StatelessWidget {
                 pubishTime: '1h',
                 postTitle: '',
                 postImage: one,
-                showBluetick: false, Commentcount: '1k', SharesCount: '2k', LikeCount: '1m'),
+                showBluetick: false,
+                Commentcount: '1k',
+                SharesCount: '2k',
+                LikeCount: '1m'),
           ],
         ),
-      ),
+      )
+
     );
   }
 }
