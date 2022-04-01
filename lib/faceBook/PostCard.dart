@@ -1,7 +1,7 @@
-import 'package:appnew/Buttons/assets.dart';
+import 'package:appnew/images/assets.dart';
 import 'package:appnew/faceBook/Avatars.dart';
-import 'package:appnew/faceBook/HeaderButtun.dart';
-import 'package:appnew/faceBook/headerbutton.dart';
+import 'package:appnew/Buttons/HeaderButtun.dart';
+import 'package:appnew/Buttons/headerbutton.dart';
 import 'package:flutter/material.dart';
 
 import 'BlueTick.dart';
@@ -148,13 +148,15 @@ class PostCard extends StatelessWidget {
   }
 
   Widget titleSection() {
-    return postTitle !=null && postTitle !=''? Container(
-      padding: EdgeInsets.only(bottom: 5),
-      child: Text(
-        postTitle == null ? '' : postTitle,
-        style: TextStyle(color: Colors.black, fontSize: 16),
-      ),
-    ):SizedBox();
+    return postTitle != null && postTitle != ''
+        ? Container(
+            padding: EdgeInsets.only(bottom: 5),
+            child: Text(
+              postTitle == null ? '' : postTitle,
+              style: TextStyle(color: Colors.black, fontSize: 16),
+            ),
+          )
+        : SizedBox();
   }
 
   Widget postCardHeader() {

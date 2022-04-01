@@ -1,6 +1,6 @@
 import 'package:appnew/faceBook/Avatars.dart';
 import 'package:flutter/material.dart';
-import '../Buttons/assets.dart';
+import '../images/assets.dart';
 
 class statusSection extends StatelessWidget {
   @override

@@ -1,4 +1,4 @@
-import 'package:appnew/Buttons/assets.dart';
+import 'package:appnew/images/assets.dart';
 
 import 'package:appnew/faceBook/Avatars.dart';
 import 'package:appnew/faceBook/home.dart';
@@ -18,8 +18,8 @@ class _ScreenLoginState extends State<ScreenLogin> {
 
   final _passwordController = TextEditingController();
 
- // final formkey = GlobalKey();
-  GlobalKey<FormState>formkey=GlobalKey<FormState>();
+  // final formkey = GlobalKey();
+  GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,6 @@ class _ScreenLoginState extends State<ScreenLogin> {
         body: SafeArea(
       child: Center(
         child: Form(
-
           key: formkey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +51,6 @@ class _ScreenLoginState extends State<ScreenLogin> {
               Container(
                 padding: const EdgeInsets.only(left: 25, right: 25),
                 child: TextFormField(
-
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       //print('Error ,enter username');
@@ -71,11 +69,10 @@ class _ScreenLoginState extends State<ScreenLogin> {
               Container(
                 padding: const EdgeInsets.only(left: 25, right: 25),
                 child: TextFormField(
-
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                     // print('empty password');
-                    return 'enter a valid password';
+                      // print('empty password');
+                      return 'enter a valid password';
                     }
                     return null;
                   },
@@ -98,9 +95,9 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 child: ElevatedButton(
                   onPressed: () {
                     // print('login clicked');
-                    if(formkey.currentState!.validate()){
+                    if (formkey.currentState!.validate()) {
                       checklogin(context);
-                    }else{
+                    } else {
                       print('date empty');
                     }
                   },
@@ -122,11 +119,12 @@ class _ScreenLoginState extends State<ScreenLogin> {
   void checklogin(BuildContext ctx) {
     final _username = _usernameController.text;
     final _userpassword = _passwordController.text;
-    if (_username.length ==_userpassword.length) {
+    if (_username.length == _userpassword.length) {
       print('user name and password is match');
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(ctx1)=>Home()));
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (ctx1) => Home()));
     } else {
-      print ('user name and password is not match');
+      print('user name and password is not match');
     }
   }
 }

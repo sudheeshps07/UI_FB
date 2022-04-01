@@ -6,11 +6,11 @@ class BlueTick extends StatelessWidget{
       return Container(
         width: 15,
         height: 15,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.blue,
           shape: BoxShape.circle
         ),
-        child: Icon(Icons.check,color: Colors.white,
+        child: const Icon(Icons.check,color: Colors.white,
         size: 10),
       );
   }

@@ -1,14 +1,14 @@
-import 'package:appnew/Buttons/assets.dart';
-import 'package:appnew/faceBook/HeaderButtun.dart';
+import 'package:appnew/images/assets.dart';
+import 'package:appnew/Buttons/HeaderButtun.dart';
 import 'package:appnew/faceBook/PostCard.dart';
-import 'package:appnew/faceBook/headerbutton.dart';
+import 'package:appnew/Buttons/headerbutton.dart';
 import 'package:appnew/faceBook/roomsection.dart';
 
 import 'package:flutter/material.dart';
 
 import '../Buttons/AppbarButtun.dart';
-import '../sections/sts.dart';
-import 'strysection.dart';
+import '../sections/status_section.dart';
+import 'story_section.dart';
 
 class Home extends StatelessWidget {
   Widget thickdivider = Divider(
@@ -36,13 +36,13 @@ class Home extends StatelessWidget {
               color: Colors.blue, fontSize: 25, fontWeight: FontWeight.bold),
         ),
         actions: [
-          AppbarButtun(
+          Circular_Button(
             buttonAction: () {
               print('pressed searchbar');
             },
             buttonIcon: Icons.search_rounded,
           ),
-          AppbarButtun(
+          Circular_Button(
               buttonIcon: Icons.message,
               buttonAction: () {
                 print('message send');
