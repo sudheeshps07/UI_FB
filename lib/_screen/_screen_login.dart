@@ -54,15 +54,15 @@ class _ScreenLoginState extends State<ScreenLogin> {
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       //print('Error ,enter username');
-                      return 'plz enter username';
+                      return 'please enter username';
                     }
                     return null;
                   },
                   controller: _usernameController,
                   decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'user name',
-                  ),
+                      border: OutlineInputBorder(),
+                      hintText: 'user name',
+                      labelText: 'user name'),
                 ),
               ),
               const SizedBox(height: 15),
@@ -78,9 +78,9 @@ class _ScreenLoginState extends State<ScreenLogin> {
                   },
                   controller: _passwordController,
                   decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'password',
-                  ),
+                      border: OutlineInputBorder(),
+                      hintText: 'password',
+                      labelText: 'password'),
                 ),
               ),
               const SizedBox(
@@ -116,15 +116,16 @@ class _ScreenLoginState extends State<ScreenLogin> {
     ));
   }
 
-  void checklogin(BuildContext ctx) {
+  checklogin(BuildContext ctx) {
     final _username = _usernameController.text;
     final _userpassword = _passwordController.text;
-    if (_username.length == _userpassword.length) {
+    if (_username.length == _userpassword.length ) {
       print('user name and password is match');
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (ctx1) => Home()));
     } else {
-      print('user name and password is not match');
+      return ;
+      //print('user name and password is not match');
     }
   }
 }

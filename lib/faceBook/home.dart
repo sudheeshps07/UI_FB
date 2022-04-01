@@ -7,6 +7,7 @@ import 'package:appnew/faceBook/roomsection.dart';
 import 'package:flutter/material.dart';
 
 import '../Buttons/AppbarButtun.dart';
+import '../_screen/_screen_login.dart';
 import '../sections/status_section.dart';
 import 'story_section.dart';
 
@@ -45,6 +46,7 @@ class Home extends StatelessWidget {
           Circular_Button(
               buttonIcon: Icons.message,
               buttonAction: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(ctx)=>ScreenLogin()));
                 print('message send');
               })
         ],

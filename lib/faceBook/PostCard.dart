@@ -82,16 +82,16 @@ class PostCard extends StatelessWidget {
                 Container(
                     width: 15,
                     height: 15,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.blue,
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.thumb_up,
                       color: Colors.white,
                       size: 10,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 displayText(label: LikeCount),
@@ -102,7 +102,7 @@ class PostCard extends StatelessWidget {
             child: Row(
               children: [
                 displayText(label: Commentcount),
-                SizedBox(width: 5),
+                const SizedBox(width: 5),
                 displayText(label: 'comments'),
                 SizedBox(
                   width: 5,
@@ -150,13 +150,13 @@ class PostCard extends StatelessWidget {
   Widget titleSection() {
     return postTitle != null && postTitle != ''
         ? Container(
-            padding: EdgeInsets.only(bottom: 5),
+            padding: const EdgeInsets.only(bottom: 5),
             child: Text(
               postTitle == null ? '' : postTitle,
               style: TextStyle(color: Colors.black, fontSize: 16),
             ),
           )
-        : SizedBox();
+        : const SizedBox();
   }
 
   Widget postCardHeader() {
@@ -166,9 +166,9 @@ class PostCard extends StatelessWidget {
         children: [
           Text(
             name,
-            style: TextStyle(color: Colors.black),
+            style: const TextStyle(color: Colors.black),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           showBluetick ? BlueTick() : SizedBox(),
